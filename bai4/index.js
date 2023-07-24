@@ -14,7 +14,10 @@ function change(){
     var tienCap = 0;
     if(loaiKH==0) { //nha dan
         tienCap = 4.5 + 20.5 + (soKenh * 7.5);
-    }  else { //doanh nghiep
+    }  else if ( 0 < soKetNoi && soKetNoi <= 10) {
+        tienCap = 15 + 75 + (50*soKenh);
+    } 
+     else { //doanh nghiep
         tienCap = 15 + 75 + (soKetNoi - 10) * 5 + (50 * soKenh);
 
     }
